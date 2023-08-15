@@ -21,8 +21,8 @@ const Main = () => {
           <div class="h-3 rounded-full bg-cyan" style={{ width: "50%" }}></div>
         </div>
       </div>
-      <div className="w-[90%] mx-auto">
-        <h3>About this project</h3>
+      <div className="w-[90%] mx-auto bg-white shadow-md rounded-md text-[15px] px-4">
+        <h3 className="font-bold text-[17px]">About this project</h3>
         <p>
           The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
           that elevates your screen to a more comfortable viewing height.
@@ -30,11 +30,35 @@ const Main = () => {
           posture and make you more comfortable while at work, helping you stay
           focused on the task at hand.
         </p>
-        <p>
+        <p className="pt-4">
           Featuring artisan craftsmanship, the simplicity of design creates
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
+        <div>
+          <h4>Bamboo Stand</h4>
+          <p>Pledge $25 or more</p>
+          <p>
+            {" "}
+            You get an ergonomic stand made of natural bamboo. You've helped us
+            launch our promotional campaign, and you’ll be added to a special
+            Backer member list.
+          </p>
+          <p>101 left</p>
+          <button> Select Reward</button>
+        </div>
+        <div>
+          <h4>Black Edition Stand</h4>
+          <p>Pledge $75 or more</p>
+          <p>
+            {" "}
+            You get a Black Special Edition computer stand and a personal thank
+            you. You’ll be added to our Backer member list. Shipping is
+            included.
+          </p>
+          <p>64 left</p>
+          <button> Select Reward</button>
+        </div>
       </div>
     </div>
   );
