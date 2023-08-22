@@ -29,15 +29,15 @@ const Header = ({handleToggle, nav}) => {
             </ul>
           </div>
           </nav>
-          <div className={ nav ? "bg-white w-[80%] mx-auto rounded-lg py-7 relative" : "hidden"}>
-            <ul className="flex flex-col">
-              <li>
+          <div className={ nav ? "bg-white w-[80%] mx-auto rounded-lg  relative" : "hidden"}>
+            <ul className="flex flex-col text-xl ">
+              <li className="border-b px-5 py-3">
                 <a href="">About</a>
               </li>
-              <li>
+              <li className="border-b px-5 py-3">
                 <a href=""> Discover</a>
               </li>
-              <li>
+              <li className="px-5 py-3">
                 <a href="">Get Started</a>
               </li>
             </ul>
