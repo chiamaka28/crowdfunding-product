@@ -4,18 +4,18 @@ const Main = () => {
   return (
     <div className="pb-12">
       <div className="w-[90%] mx-auto max-w-[650px] bg-white shadow-md my-12 pb-6 rounded-md">
-        <div className="flex flex-col md:flex-row items-center md:justify-between md:px-12">
+        <div className="flex flex-col md:flex-row items-center md:gap-20 md:px-12">
           <p className="flex flex-col text-center my-4 ">
             <span className="text-[25px] font-extrabold">$89,914</span> of
             $100,000 backed
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
-          <p className="flex flex-col text-center my-4">
+          <p className="flex flex-col text-center my-4 md:border-l md:pl-6">
             <span className="text-[25px] font-extrabold">$5,007</span> of total
             backers
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
-          <p className="flex flex-col text-center ">
+          <p className="flex flex-col text-center md:border-l md:pl-6">
             <span className="text-[25px] font-extrabold">56</span> days left
           </p>
         </div>
