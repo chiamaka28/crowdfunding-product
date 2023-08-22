@@ -12,9 +12,22 @@ const Header = ({handleToggle, nav}) => {
         <div onClick={handleToggle} className={nav ? "fixed top-0 left-0 bg-overlay w-full h-full z-50 transition-all duration-700 ease-in-out" : ""}>
           <nav className="flex items-center justify-between py-5 px-4 w-[90%] mx-auto max-w-[1100px]">
             <img src={logo} alt="" />
-            <button onClick={handleToggle}>
+            <button onClick={handleToggle} className="md:hidden">
               {nav ? <img src={close} alt="" className="h-5"/> : <img src={hamburger} alt="" />}  
             </button>
+            <div className="hidden md:block">
+            <ul className="hidden md:flex gap-6 text-white">
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href=""> Discover</a>
+              </li>
+              <li>
+                <a href="">Get Started</a>
+              </li>
+            </ul>
+          </div>
           </nav>
           <div className={ nav ? "bg-white w-[80%] mx-auto rounded-lg py-7 relative" : "hidden"}>
             <ul className="flex flex-col">
@@ -31,7 +44,7 @@ const Header = ({handleToggle, nav}) => {
           </div>
         </div>
       </div>
-      <div className="w-[90%] mx-auto max-w-[750px] bg-white mt-[-50px] rounded-md relative text-center shadow-md pb-6 px-2">
+      <div className="w-[90%] mx-auto max-w-[650px] bg-white mt-[-50px] rounded-md relative text-center shadow-md pb-6 px-2">
         <div className="flex justify-center items-center">
           <img src={mastercraft} alt="" className=" absolute top-[-20] " />
         </div>

@@ -3,9 +3,9 @@ import React from "react";
 const Main = () => {
   return (
     <div className="pb-12">
-      <div className="w-[90%] mx-auto max-w-[750px] bg-white shadow-md my-12 pb-6 rounded-md">
-        <div className="flex flex-col md:flex-row items-center">
-          <p className="flex flex-col text-center my-4 after:content-['']">
+      <div className="w-[90%] mx-auto max-w-[650px] bg-white shadow-md my-12 pb-6 rounded-md">
+        <div className="flex flex-col md:flex-row items-center md:justify-between md:px-12">
+          <p className="flex flex-col text-center my-4 ">
             <span className="text-[25px] font-extrabold">$89,914</span> of
             $100,000 backed
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
@@ -19,11 +19,11 @@ const Main = () => {
             <span className="text-[25px] font-extrabold">56</span> days left
           </p>
         </div>
-        <div class="mb-5 h-3 rounded-full bg-gray-200 w-[80%] mx-auto ">
+        <div class="mb-5 h-3 rounded-full bg-gray-200 w-[80%] md:w-[90%] mx-auto ">
           <div class="h-3 rounded-full bg-cyan" style={{ width: "50%" }}></div>
         </div>
       </div>
-      <div className="w-[90%] mx-auto max-w-[750px] bg-white shadow-md rounded-md text-[15px] px-4 pb-9">
+      <div className="w-[90%] mx-auto max-w-[650px] bg-white shadow-md rounded-md text-[15px] px-4 pb-9">
         <h3 className="font-bold text-[17px]">About this project</h3>
         <div className="text-darkGray">
           <p>
