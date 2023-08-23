@@ -18,7 +18,7 @@ const Header = ({handleToggle, nav}) => {
   }
   return (
     <>
-    {modal && <ProjectModal/>}
+    {modal && <ProjectModal handleModal={handleModal}/>}
       <div className="bg-mobileHeader md:bg-desktopHeader h-72 bg-cover ">
         <div  className={`${nav ? "fixed top-0 left-0 bg-overlay w-full h-full z-50 transition-all duration-700 ease-in-out" : "" }`}>
           <nav className="flex items-center justify-between py-5 px-4 w-[90%] mx-auto max-w-[1100px]">
