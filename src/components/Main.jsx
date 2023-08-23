@@ -1,7 +1,11 @@
 import React from "react";
 
+
 const Main = () => {
+ 
   return (
+    <>
+    
     <div className="pb-12">
       <div className="w-[90%] mx-auto max-w-[650px] bg-white shadow-md my-12 pb-6 rounded-md">
         <div className="flex flex-col md:flex-row items-center md:gap-20 md:px-12">
@@ -78,6 +82,7 @@ const Main = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
