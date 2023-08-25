@@ -56,7 +56,7 @@ const Main = () => {
             <p><span className="text-[26px] font-extrabold">101</span> left</p>
             <button className="bg-cyan py-2 px-4 text-white rounded-3xl my-2"> Select Reward</button>
           </div>
-          <div className="border border-darkGray py-6 px-4 rounded-md">
+          <div className="border border-darkGray py-6 px-4 rounded-md ">
             <h4 className="font-bold">Black Edition Stand</h4>
             <p className="text-cyan">Pledge $75 or more</p>
             <p className="text-darkGray py-5">
@@ -68,7 +68,7 @@ const Main = () => {
             <p><span className="text-[26px] font-extrabold">64</span> left</p>
             <button className="bg-cyan py-2 px-4  text-white rounded-3xl my-2"> Select Reward</button>
           </div>
-          <div className="border border-darkGray py-6 px-4 rounded-md">
+          <div className="border border-darkGray py-6 px-4 rounded-md opacity-40">
             <h4 className="font-bold">Mahogany Special Edition Pledge</h4>
             <p className="text-cyan"> $200 or more</p>
             <p className="text-darkGray py-5">
