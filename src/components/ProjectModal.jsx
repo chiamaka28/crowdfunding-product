@@ -9,8 +9,8 @@ const ProjectModal = ({ handleModal }) => {
     setSelected(!selected)
   }
   return (
-    <div className="fixed top-0 left-0 bg-overlay w-full h-full z-50 flex justify-center items-center">
-      <div className="bg-white w-[90%] h-[80%] overflow-auto overscroll-contain px-3 rounded-lg">
+    <div className="fixed top-0 left-0 bg-overlay overflow-y-auto w-full h-full z-50">
+      <div className="bg-white w-[90%] min-h-[100%] px-3 rounded-lg mx-auto my-28">
         <div className="flex justify-between items-center">
           <h3>Back this project</h3>
           <button onClick={handleModal}>

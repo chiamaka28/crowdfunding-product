@@ -15,7 +15,7 @@ const Main = () => {
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
           <p className="flex flex-col text-center my-4 md:border-l md:pl-6">
-            <span className="text-[25px] font-extrabold">$5,007</span> of total
+            <span className="text-[25px] font-extrabold">5,007</span> of total
             backers
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
