@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import close from "../assets/icon-close-modal.svg";
-import NoReward from "./NoReward";
-import BambooStand from "./BambooStand";
-import BlackEdition from "./BlackEdition";
-import Mahongany from "./Mahongany";
+import NoReward from "./modalCards/NoReward";
+import BambooStand from "./modalCards/BambooStand";
+import BlackEdition from "./modalCards/BlackEdition";
+import Mahongany from "./modalCards/Mahongany";
 
 
 const ProjectModal = ({ handleModal,  }) => {

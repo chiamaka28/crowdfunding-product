@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
-const NoReward = () => {
+const NoReward = ({increaseCount}) => {
   const [selected, setSelected] = useState(false);
  
 
   const handleSelect = () => {
     setSelected(!selected);
+    increaseCount();
   };
 
  

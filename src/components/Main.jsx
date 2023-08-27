@@ -1,27 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
+import ProjectModal from "./ProjectModal";
+import mastercraft from "../assets/logo-mastercraft.svg";
+import bookmark from "../assets/icon-bookmark.svg";
 
 
-const Main = ({backed, backers, days, count, increaseCount}) => {
-  
+const Main = ({}) => {
+  const [modal, setModal] = useState(false);
+
+  const handleModal = () => {
+    setModal(!modal)
+    !modal
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "unset");
+  }
  
   return (
     <>
-    
+     {modal && <ProjectModal handleModal={handleModal}  />}
+      <div className="w-[90%] mx-auto max-w-[650px] bg-white mt-[-50px] rounded-md relative text-center shadow-md pb-6 px-2">
+        <div className="flex justify-center items-center">
+          <img src={mastercraft} alt="" className=" absolute top-[-20] " />
+        </div>
+        <h1 className=" text-xl font-bold px-8 mt-12">
+          {" "}
+          Mastercraft Bamboo Monitor Riser
+        </h1>
+        <p className="py-2">
+          {" "}
+          A beautiful & handcrafted monitor stand to reduce neck and eye strain.
+        </p>
+        <div className="flex justify-center md:justify-between md:px-4 items-center gap-3 py-2">
+          <button onClick={handleModal} className="bg-cyan text-white rounded-3xl py-3 px-5 text-[15px] font-semibold">
+             Back this project
+          </button>
+          <div>
+            <img className="w-12" src={bookmark} alt="" />
+          </div>
+        </div>
+      </div>
     <div className="pb-12">
       <div className="w-[90%] mx-auto max-w-[650px] bg-white shadow-md my-12 pb-6 rounded-md">
         <div className="flex flex-col md:flex-row items-center md:gap-20 md:px-12">
           <p className="flex flex-col text-center my-4 ">
-            <span className="text-[25px] font-extrabold">${backed}</span> of
+            <span className="text-[25px] font-extrabold">$</span> of
             $100,000 backed
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
-          <p onClick={increaseCount} className="flex flex-col text-center my-4 md:border-l md:pl-6">
-            <span className="text-[25px] font-extrabold">{count}</span> of total
+          <p  className="flex flex-col text-center my-4 md:border-l md:pl-6">
+            <span className="text-[25px] font-extrabold"></span> of total
             backers
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
           <p className="flex flex-col text-center md:border-l md:pl-6">
-            <span className="text-[25px] font-extrabold">{days}</span> days left
+            <span className="text-[25px] font-extrabold"></span> days left
           </p>
         </div>
         <div class="mb-5 h-3 rounded-full bg-gray-200 w-[80%] md:w-[90%] mx-auto ">

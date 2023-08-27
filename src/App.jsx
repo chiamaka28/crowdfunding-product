@@ -23,7 +23,7 @@ function App() {
     <>
       <button onClick={increaseCount}>Click me</button>
       {count}
-      <Header handleToggle={handleToggle} nav={nav} />
+      <Header handleToggle={handleToggle} nav={nav} increaseCount={increaseCount}/>
       <Main backed={backed} backers={backers} days={days} count={count} setCount={setCount} increaseCount={increaseCount}/>
     </>
   );
