@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import close from "../assets/icon-close-modal.svg";
+import NoReward from "./NoReward";
+import BambooStand from "./BambooStand";
+import BlackEdition from "./BlackEdition";
+import Mahongany from "./Mahongany";
 
 
-const ProjectModal = ({ handleModal }) => {
+const ProjectModal = ({ handleModal,  }) => {
   const [selected, setSelected] = useState(false);
 
   const handleSelect = () => {
@@ -10,7 +14,7 @@ const ProjectModal = ({ handleModal }) => {
   }
   return (
     <div className="fixed top-0 left-0 bg-overlay overflow-y-auto w-full h-full z-50">
-      <div className="bg-white w-[90%] min-h-[100%] px-3 rounded-lg mx-auto my-28">
+      <div className="bg-white w-[90%] min-h-[100%] px-3 rounded-lg mx-auto my-28 py-6">
         <div className="flex justify-between items-center">
           <h3>Back this project</h3>
           <button onClick={handleModal}>
@@ -22,72 +26,10 @@ const ProjectModal = ({ handleModal }) => {
           the world?
         </p>
         <div className="flex flex-col gap-y-6">
-          <div className={` ${selected ? "border-cyan border-[2px]" : "border-darkGrey border-[1px]"} border border-darkGray rounded-md px-6 py-3`}>
-            <div className="flex items-center gap-4 py-4">
-              <button onClick={handleSelect} className="  border border-black w-5 h-5 rounded-full flex justify-center items-center" >
-               { selected && <div className="h-3 w-3 rounded-full bg-cyan"></div> }
-              </button>
-              <h4>Pledge with no reward </h4>
-            </div>
-            <p>
-              Choose to support us without a reward if you simply believe in our
-              project. As a backer, your will be signed up to receive product
-              updates via email.
-            </p>
-          </div>
-          <div className={` ${selected ? "border-cyan border-[2px]" : "border-darkGrey border-[1px]"} border border-darkGray rounded-md px-6 py-3`}>
-            <div className="flex items-center gap-4  py-4">
-              <button  onClick={handleSelect} className="border border-black w-5 h-5 rounded-full flex justify-center items-center">
-              { selected && <div className="h-3 w-3 rounded-full bg-cyan"></div> }
-              </button>
-              <div>
-                <h4>Bamboo Stand </h4>
-                <h3>Pledge $25 or more</h3>
-              </div>
-            </div>
-            <p>
-              You get an ergonomic stand made of natural bamboo. You've helped us
-              launch our promotional campaign, and you’ll be added to a special
-              Backer member list.
-              <p className=""> 101 left</p>
-            </p>
-          </div>
-          <div className="border border-darkGray rounded-md px-6 py-3">
-            <div className="flex items-center gap-4 py-4">
-              <button className="border border-black w-5 h-5 rounded-full flex justify-center items-center">
-                {/* <div className="h-3 w-3 rounded-full bg-cyan"></div> */}
-              </button>
-              <div>
-                <h4>Black Edition Stand </h4>
-                <h3> Pledge $75 or more</h3>
-              </div>
-            </div>
-            <div>
-              <p>
-                You get a Black Special Edition computer stand and a personal
-                thank you. You’ll be added to our Backer member list. Shipping is
-                included.
-              </p>
-              <p> 64 left</p>
-            </div>
-          </div>
-          <div className="border border-darkGray rounded-md px-6 py-3">
-            <div className="flex items-center gap-4 py-4">
-              <button className="border border-black w-5 h-5 rounded-full flex justify-center items-center">
-                {/* <div className="h-3 w-3 rounded-full bg-cyan"></div> */}
-              </button>
-              <div>
-                <h4>Mahogany Special Edition </h4>
-                <h3> Pledge $200 or more</h3>
-              </div>
-            </div>
-            <p>
-                You get two Special Edition Mahogany stands, a Backer T-Shirt, and
-                a personal thank you. You’ll be added to our Backer member list.
-                Shipping is included.
-              </p>
-              <p>  0 left</p>
-          </div>
+          <NoReward />
+          <BambooStand />
+          <BlackEdition/>
+          <Mahongany/>
         </div>
       </div>
     </div>
