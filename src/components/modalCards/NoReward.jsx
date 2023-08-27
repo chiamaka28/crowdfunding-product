@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-const NoReward = ({increaseCount}) => {
+const NoReward = () => {
   const [selected, setSelected] = useState(false);
  
 
   const handleSelect = () => {
     setSelected(!selected);
-    increaseCount();
+   
   };
 
  
@@ -31,6 +31,7 @@ const NoReward = ({increaseCount}) => {
         via email.
         <span className="w-[100%] h-[20px] bg-black  "></span>
       </p>
+      {selected ? <div className="flex justify-center my-2"><button className="bg-cyan py-2 px-4 rounded-3xl text-white" >Continue</button></div> : ""}
     </div>
   );
 };

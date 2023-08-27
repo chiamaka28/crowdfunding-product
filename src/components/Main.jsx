@@ -5,7 +5,12 @@ import bookmark from "../assets/icon-bookmark.svg";
 
 
 const Main = ({}) => {
+  let backed = 89914;
+  let backers = 5007;
+  let days = 56;
   const [modal, setModal] = useState(false);
+  const [count, setCount] = useState(backers)
+
 
   const handleModal = () => {
     setModal(!modal)
@@ -14,9 +19,12 @@ const Main = ({}) => {
       : (document.body.style.overflow = "unset");
   }
  
+  const increaseCount = () => {
+    setCount(count + 1);
+  }
   return (
     <>
-     {modal && <ProjectModal handleModal={handleModal}  />}
+     {modal && <ProjectModal handleModal={handleModal}  increaseCount={increaseCount} />}
       <div className="w-[90%] mx-auto max-w-[650px] bg-white mt-[-50px] rounded-md relative text-center shadow-md pb-6 px-2">
         <div className="flex justify-center items-center">
           <img src={mastercraft} alt="" className=" absolute top-[-20] " />
@@ -47,7 +55,7 @@ const Main = ({}) => {
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
           <p  className="flex flex-col text-center my-4 md:border-l md:pl-6">
-            <span className="text-[25px] font-extrabold"></span> of total
+            <span className="text-[25px] font-extrabold">{count}</span> of total
             backers
             <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
           </p>
