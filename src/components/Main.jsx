@@ -21,10 +21,11 @@ const Main = ({}) => {
  
   const increaseCount = () => {
     setCount(count + 1);
+    console.log(count);
   }
   return (
     <>
-     {modal && <ProjectModal handleModal={handleModal}  increaseCount={increaseCount} />}
+     {modal && <ProjectModal handleModal={handleModal}  increaseCount={increaseCount} count={count} setCount={setCount}/>}
       <div className="w-[90%] mx-auto max-w-[650px] bg-white mt-[-50px] rounded-md relative text-center shadow-md pb-6 px-2">
         <div className="flex justify-center items-center">
           <img src={mastercraft} alt="" className=" absolute top-[-20] " />

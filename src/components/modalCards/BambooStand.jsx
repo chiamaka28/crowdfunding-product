@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 
 
-const BambooStand = () => {
+const BambooStand = ({count, setCount}) => {
    const [selected, setSelected] = useState(false);
 
    const handleSelect = () => {
     setSelected(!selected)
+  }
+  const update = () => {
+    setCount(count + 1);
   }
   return (
     <div className={` ${selected ? "border-cyan border-[2px]" : "border-darkGrey border-[1px]"} border border-darkGray rounded-md px-6 py-3`}>
@@ -24,6 +27,7 @@ const BambooStand = () => {
       Backer member list.
       <p className=""> 101 left</p>
     </p>
+    {selected ? <div className="flex justify-center my-2"><button onClick={update} className="bg-cyan py-2 px-4 rounded-3xl text-white" >Continue</button></div> : ""}
   </div>
   )
 }
