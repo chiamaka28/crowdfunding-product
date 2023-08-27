@@ -6,7 +6,6 @@ const NoReward = ({increaseCount}) => {
 
   const handleSelect = () => {
     setSelected(!selected);
-   
   };
 
  
