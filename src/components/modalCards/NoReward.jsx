@@ -13,7 +13,7 @@ const NoReward = ({increaseCount}) => {
     <div
       className={` ${
         selected ? "border-cyan border-[2px]" : "border-darkGray border-[1px]"
-      } border border-darkGray rounded-md px-6 py-3`}
+      } border rounded-md px-6 py-3`}
     >
       <div className="flex items-center gap-4 py-4">
         <button

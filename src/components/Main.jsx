@@ -11,6 +11,7 @@ const Main = ({}) => {
   const [modal, setModal] = useState(false);
   const [successModal, setSuccessModal] = useState(false);
   const [count, setCount] = useState(backers);
+  const [amount, setAmount] = useState(backed)
 
   const handleModal = () => {
     setModal(!modal);
@@ -33,14 +34,19 @@ const Main = ({}) => {
 
     console.log(count);
   };
+
   return (
     <>
       {modal && (
         <ProjectModal
+          modal={modal}
+          setModal={setModal}
           handleModal={handleModal}
           increaseCount={increaseCount}
           count={count}
           setCount={setCount}
+          amount={amount}
+          setAmount={setAmount}
           successModal={successModal}
           setSuccessModal={setSuccessModal}
           handleSuccessModal={handleSuccessModal}
@@ -75,7 +81,7 @@ const Main = ({}) => {
         <div className="w-[90%] mx-auto max-w-[650px] bg-white shadow-md my-12 pb-6 rounded-md">
           <div className="flex flex-col md:flex-row items-center md:gap-20 md:px-12">
             <p className="flex flex-col text-center my-4 ">
-              <span className="text-[25px] font-extrabold">$</span> of $100,000
+              <span className="text-[25px] font-extrabold">${amount}</span> of $100,000
               backed
               <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
             </p>
@@ -85,7 +91,7 @@ const Main = ({}) => {
               <span className="w-[20%] h-[1px] bg-black mx-auto mt-3 md:hidden"></span>
             </p>
             <p className="flex flex-col text-center md:border-l md:pl-6">
-              <span className="text-[25px] font-extrabold"></span> days left
+              <span className="text-[25px] font-extrabold">{days}</span> days left
             </p>
           </div>
           <div class="mb-5 h-3 rounded-full bg-gray-200 w-[80%] md:w-[90%] mx-auto ">
@@ -113,53 +119,65 @@ const Main = ({}) => {
           </div>
           <div className="flex flex-col gap-y-5 mt-6">
             <div className="border border-darkGray py-6 px-4 rounded-md">
-              <h4 className="font-bold">Bamboo Stand</h4>
-              <p className="text-cyan">Pledge $25 or more</p>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <h4 className="font-bold">Bamboo Stand</h4>
+                <p className="text-cyan">Pledge $25 or more</p>
+              </div>
               <p className="text-darkGray py-5 ">
                 {" "}
                 You get an ergonomic stand made of natural bamboo. You've helped
                 us launch our promotional campaign, and you’ll be added to a
                 special Backer member list.
               </p>
-              <p>
-                <span className="text-[26px] font-extrabold">101</span> left
-              </p>
-              <button className="bg-cyan py-2 px-4 text-white rounded-3xl my-2">
-                {" "}
-                Select Reward
-              </button>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <p>
+                  <span className="text-[26px] font-extrabold">101</span> left
+                </p>
+                <button className="bg-cyan py-2 px-4 text-white rounded-3xl my-2">
+                  {" "}
+                  Select Reward
+                </button>
+              </div>
             </div>
             <div className="border border-darkGray py-6 px-4 rounded-md ">
-              <h4 className="font-bold">Black Edition Stand</h4>
-              <p className="text-cyan">Pledge $75 or more</p>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <h4 className="font-bold">Black Edition Stand</h4>
+                <p className="text-cyan">Pledge $75 or more</p>
+              </div>
               <p className="text-darkGray py-5">
                 {" "}
                 You get a Black Special Edition computer stand and a personal
                 thank you. You’ll be added to our Backer member list. Shipping
                 is included.
               </p>
-              <p>
-                <span className="text-[26px] font-extrabold">64</span> left
-              </p>
-              <button className="bg-cyan py-2 px-4  text-white rounded-3xl my-2">
-                {" "}
-                Select Reward
-              </button>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <p>
+                  <span className="text-[26px] font-extrabold">64</span> left
+                </p>
+                <button className="bg-cyan py-2 px-4  text-white rounded-3xl my-2">
+                  {" "}
+                  Select Reward
+                </button>
+              </div>
             </div>
             <div className="border border-darkGray py-6 px-4 rounded-md opacity-40">
-              <h4 className="font-bold">Mahogany Special Edition Pledge</h4>
-              <p className="text-cyan"> $200 or more</p>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <h4 className="font-bold">Mahogany Special Edition Pledge</h4>
+                <p className="text-cyan"> $200 or more</p>
+              </div>
               <p className="text-darkGray py-5">
                 You get two Special Edition Mahogany stands, a Backer T-Shirt,
                 and a personal thank you. You’ll be added to our Backer member
                 list. Shipping is included.
               </p>
-              <p>
-                <span className="text-[26px] font-extrabold">0</span>left
-              </p>
-              <button className="bg-cyan py-2 px-4  text-white rounded-3xl my-2">
-                Out of Stock
-              </button>
+              <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+                <p>
+                  <span className="text-[26px] font-extrabold">0</span>left
+                </p>
+                <button className="bg-cyan py-2 px-4  text-white rounded-3xl my-2">
+                  Out of Stock
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -6,11 +6,14 @@ import BlackEdition from "./modalCards/BlackEdition";
 import Mahongany from "./modalCards/Mahongany";
 
 const ProjectModal = ({
+  modal,
+  setModal,
   handleModal,
   increaseCount,
   setCount,
   count,
-  handleSuccessModal,
+  setAmount,
+  amount,
   successModal,
   setSuccessModal,
 }) => {
@@ -28,8 +31,21 @@ const ProjectModal = ({
           the world?
         </p>
         <div className="flex flex-col gap-y-6">
-          <NoReward increaseCount={increaseCount} successModal={successModal} setSuccessModal={setSuccessModal} />
-          <BambooStand setCount={setCount} count={count} />
+          <NoReward
+            increaseCount={increaseCount}
+            successModal={successModal}
+            setSuccessModal={setSuccessModal}
+          />
+          <BambooStand
+            modal = {modal}
+            setModal = {setModal}
+            setCount={setCount}
+            count={count}
+            amount={amount}
+            setAmount={setAmount}
+            successModal={successModal}
+            setSuccessModal={setSuccessModal}
+          />
           <BlackEdition />
           <Mahongany />
         </div>

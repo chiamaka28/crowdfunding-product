@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 
-const BambooStand = ({ count, setCount }) => {
+const BambooStand = ({ modal, setModal, count, setCount, amount, setAmount, successModal, setSuccessModal }) => {
   let items = 101;
   const [selected, setSelected] = useState(false);
   const [itemsLeft, setItemsLeft] = useState(items);
+  const [input, setInput] = useState(25);
+  console.log(input);
 
   const handleSelect = () => {
     setSelected(!selected);
   };
   const update = () => {
+    setModal(!modal)
     setCount(count + 1);
+    setAmount(amount + input)
     setItemsLeft(itemsLeft - 1);
+    setSuccessModal(!successModal)
   };
   return (
     <div
@@ -41,12 +46,15 @@ const BambooStand = ({ count, setCount }) => {
       {selected && (
         <div className="border-t border-darkGray py-4">
           <h5 className="text-center">Enter your Pledge</h5>
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-6 py-2">
+            <input  name="" id="" />
             <input 
-            type="text"
-            className="border-darkGray border-[1px] outline-none py-2 w-[30%] rounded-3xl text-center"
+            type="number"
+            value={input}
+            onChange={(e) => (setInput(e.target.value))}
+            className="border-darkGray border-[1px] outline-none py-2 w-[30%] max-w-[100px] rounded-3xl text-center"
              />
-             <button onClick={update} className="bg-cyan  py-2 px-4 rounded-3xl text-white" >Continue</button>
+             <button onClick={update} className="bg-cyan  py-1 px-4 rounded-3xl text-white" >Continue</button>
           </div>
         </div>
       )}
