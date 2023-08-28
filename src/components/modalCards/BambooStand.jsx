@@ -8,14 +8,15 @@ const BambooStand = ({ modal, setModal, count, setCount, amount, setAmount, succ
   console.log(input);
 
   const handleSelect = () => {
+    setItemsLeft(itemsLeft - 1);
     setSelected(!selected);
   };
   const update = () => {
     setModal(!modal)
     setCount(count + 1);
     setAmount(amount + input)
-    setItemsLeft(itemsLeft - 1);
-    setSuccessModal(!successModal)
+    setSuccessModal(!successModal);
+    console.log(itemsLeft)
   };
   return (
     <div

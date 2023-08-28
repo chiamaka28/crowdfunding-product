@@ -8,6 +8,7 @@ const Main = ({}) => {
   let backed = 89914;
   let backers = 5007;
   let days = 56;
+  
   const [modal, setModal] = useState(false);
   const [successModal, setSuccessModal] = useState(false);
   const [count, setCount] = useState(backers);
