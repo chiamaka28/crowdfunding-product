@@ -22,9 +22,9 @@ const NoReward = ({increaseCount}) => {
         >
           {selected && <div className="h-3 w-3 rounded-full bg-cyan"></div>}
         </button>
-        <h4>Pledge with no reward </h4>
+        <h4 className="font-bold">Pledge with no reward </h4>
       </div>
-      <p>
+      <p className="text-darkGray">
         Choose to support us without a reward if you simply believe in our
         project. As a backer, your will be signed up to receive product updates
         via email.
