@@ -14,7 +14,7 @@ const BambooStand = ({ modal, setModal, count, setCount, amount, setAmount, succ
     setModal(!modal)
     setCount(count + 1);
     setItemsLeft(itemsLeft - 1);
-    setAmount(amount + input)
+    setAmount(Number(amount) + Number(input))
     setSuccessModal(!successModal);
     console.log(itemsLeft)
   };

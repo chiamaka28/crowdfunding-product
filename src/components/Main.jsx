@@ -12,7 +12,8 @@ const Main = ({}) => {
   const [modal, setModal] = useState(false);
   const [successModal, setSuccessModal] = useState(false);
   const [count, setCount] = useState(backers);
-  const [amount, setAmount] = useState(backed)
+  const [amount, setAmount] = useState(backed);
+  console.log(typeof(amount))
 
   const handleModal = () => {
     setModal(!modal);

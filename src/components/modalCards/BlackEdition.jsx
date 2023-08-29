@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const BlackEdition = () => {
     const [selected, setSelected] = useState(false);
     const [input , setInput] = useState(0);
-
+    console.log(typeof(input))
     const handleSelect = () => {
      setSelected(!selected)
    }
